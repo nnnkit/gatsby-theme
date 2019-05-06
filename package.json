@@ -2,6 +2,9 @@
   "private": true,
   "name": "gatsby-theme",
   "version": "1.0.0",
+  "scripts": {
+    "start": "yarn workspace site start"
+  },
   "workspaces": [
     "site",
     "packages/*"
