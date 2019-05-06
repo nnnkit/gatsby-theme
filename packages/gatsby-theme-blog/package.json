@@ -3,5 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Ankit <iankit17@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gatsby": "2.4.2",
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
+  },
+  "peerDependencies": {
+    "gatsby": "2.4.2",
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
+  }
 }
