@@ -1,11 +1,16 @@
 {
   "name": "gatsby-theme-blog",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "gatsby-config.js",
   "author": "Ankit <iankit17@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@mdx-js/mdx": "1.0.16",
+    "@mdx-js/react": "1.0.16",
+    "@mdx-js/tag": "0.20.3",
     "gatsby": "2.4.2",
+    "gatsby-mdx": "0.6.3",
+    "gatsby-plugin-page-creator": "2.0.12",
     "react": "16.8.6",
     "react-dom": "16.8.6"
   },
