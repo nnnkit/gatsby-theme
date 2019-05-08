@@ -10,7 +10,7 @@ export default function usePostsData() {
             slug
             keywords
             banner {
-              childImageSharp {
+              sharp: childImageSharp {
                 fluid {
                   ...GatsbyImageSharpFluid_tracedSVG
                 }
