@@ -11,7 +11,9 @@ export default function usePostsData() {
             keywords
             banner {
               childImageSharp {
-                id
+                fluid {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
               }
             }
             categories
