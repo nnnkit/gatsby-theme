@@ -3,7 +3,7 @@
   "name": "gatsby-theme",
   "version": "1.0.0",
   "scripts": {
-    "start": "yarn workspace site start"
+    "start": "rm -rf site/.cache && yarn workspace site start"
   },
   "workspaces": [
     "site",
