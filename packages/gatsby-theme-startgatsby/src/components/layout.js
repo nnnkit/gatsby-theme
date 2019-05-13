@@ -1,8 +1,10 @@
 import React from "react";
 import { Global, css } from "@emotion/core";
 import Helmet from "react-helmet";
+import metadata from "./../hooks/siteMetadata";
 
 const Layout = ({ children }) => {
+  const { title, description } = metadata();
   return (
     <>
       <Global
@@ -50,7 +52,8 @@ const Layout = ({ children }) => {
         `}
       />
       <Helmet>
-        <title>Start Gatsby Theme</title>
+        <title>{title}</title>
+        <meta name="description" content={description} />
       </Helmet>
       <main
         css={css`
