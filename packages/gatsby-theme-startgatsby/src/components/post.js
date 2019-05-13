@@ -35,7 +35,9 @@ export default function post({ data: { mdx: post } }) {
           font-size: 40px;
         `}
       >
-        <span role="img">👈</span>
+        <span role="img" aria-label="back">
+          👈
+        </span>
       </Link>
       <Img
         fluid={post.frontmatter.banner.sharp.fluid}
