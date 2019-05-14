@@ -1,5 +1,4 @@
 module.exports = themeOption => {
-  console.log(themeOption, "from theme themeoption");
   return {
     siteMetadata: {
       title: themeOption.title,
@@ -9,6 +8,7 @@ module.exports = themeOption => {
       "gatsby-plugin-emotion",
       "gatsby-transformer-sharp",
       "gatsby-plugin-sharp",
+      "gatsby-plugin-postcss",
       {
         resolve: "gatsby-mdx",
         options: {
