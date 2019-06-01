@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "./layout";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import PostGrid from "./postGrid";
 
 export default function tags({

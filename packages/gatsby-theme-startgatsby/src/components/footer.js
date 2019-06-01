@@ -49,6 +49,7 @@ export default function Footer() {
                       <a
                         href={`https://www.facebook.com/${facebook}/`}
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="flex-start footer__social-item1"
                       >
                         <i className="fab fa-facebook" />
@@ -56,6 +57,7 @@ export default function Footer() {
                       <a
                         href={`https://www.twitter.com/${twitter}/`}
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="flex-start"
                       >
                         <i className="fab fa-twitter-square" />
@@ -63,6 +65,7 @@ export default function Footer() {
                       <a
                         href={`https://www.github.com/${github}/`}
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="flex-start"
                       >
                         <i className="fab fa-github" />
