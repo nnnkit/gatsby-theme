@@ -3,7 +3,7 @@ import Img from "gatsby-image";
 import { Link } from "gatsby";
 
 export default function PostGrid({ excerpt, frontmatter }) {
-  const { banner, title, slug } = frontmatter;
+  const { banner, title, slug, date } = frontmatter;
   return (
     <>
       <div className="blog__item">
@@ -17,9 +17,7 @@ export default function PostGrid({ excerpt, frontmatter }) {
             <h3 className="blog__heading">{title}</h3>
           </Link>
           <div className="blog__details flex-start">
-            <span>Airytails</span>
-            <span className="separator">|</span>
-            <span>Feb 26, 2019</span>
+            <span>{date}</span>
           </div>
           <div>
             <p className="blog__intro-text">{excerpt}</p>

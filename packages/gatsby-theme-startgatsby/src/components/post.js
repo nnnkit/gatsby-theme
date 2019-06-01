@@ -17,6 +17,7 @@ export const query = graphql`
             }
           }
         }
+        date(formatString: "MMMM Do, YYYY")
         categories
       }
       code {
@@ -26,7 +27,8 @@ export const query = graphql`
   }
 `;
 export default function Post({ data: { mdx: post } }) {
-  const { banner, title } = post.frontmatter;
+  const { banner, title, date } = post.frontmatter;
+  console.log(banner, date);
   return (
     <Layout>
       <div className="post-single-container">
@@ -34,9 +36,7 @@ export default function Post({ data: { mdx: post } }) {
           <header>
             <h1 className="post-single__title">{title}</h1>
             <div className="blog__details flex-start">
-              <span>Airytails</span>
-              <span className="separator">|</span>
-              <span>Mar 15, 2019</span>
+              <span>{date}</span>
             </div>
             <Img
               fluid={banner.sharp.fluid}

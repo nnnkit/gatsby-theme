@@ -16,6 +16,7 @@ export default function usePostsData() {
                 }
               }
             }
+            date(formatString: "MMMM Do, YYYY")
             categories
           }
           excerpt
