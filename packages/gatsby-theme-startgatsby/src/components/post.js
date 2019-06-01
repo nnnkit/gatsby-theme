@@ -28,7 +28,6 @@ export const query = graphql`
 `;
 export default function Post({ data: { mdx: post } }) {
   const { banner, title, date } = post.frontmatter;
-  console.log(banner, date);
   return (
     <Layout>
       <div className="post-single-container">

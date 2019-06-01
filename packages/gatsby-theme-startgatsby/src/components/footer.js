@@ -1,6 +1,8 @@
 import React from "react";
+import getSocialInfo from "../hooks/socialInfo";
 
 export default function Footer() {
+  const { email, facebook, twitter, github } = getSocialInfo();
   return (
     <footer className="footer">
       <img className="footer__logo" src="assets/images/logo7.png" alt="" />
@@ -11,18 +13,11 @@ export default function Footer() {
               <div>
                 <h6>Contact Us</h6>
                 <a
-                  href="tel:+918884446745"
-                  className="flex-start footer__contact-item"
-                >
-                  <i className="fas fa-phone-square" />
-                  <p>+918884446745</p>
-                </a>
-                <a
                   href="mailto:connect@airytails.com"
                   className="flex-start footer__contact-item"
                 >
                   <i className="fas fa-envelope" />
-                  <p>connect@airytails.com</p>
+                  <p>{email}</p>
                 </a>
               </div>
             </div>
@@ -52,32 +47,25 @@ export default function Footer() {
                   <div className="flex-center">
                     <div className="flex-start footer__social-item">
                       <a
-                        href="https://www.facebook.com/airytails/"
+                        href={`https://www.facebook.com/${facebook}/`}
                         target="_blank"
                         className="flex-start footer__social-item1"
                       >
                         <i className="fab fa-facebook" />
                       </a>
                       <a
-                        href="https://twitter.com/Airytails"
+                        href={`https://www.twitter.com/${twitter}/`}
                         target="_blank"
                         className="flex-start"
                       >
                         <i className="fab fa-twitter-square" />
                       </a>
                       <a
-                        href="https://www.linkedin.com/company/airytails/"
+                        href={`https://www.github.com/${github}/`}
                         target="_blank"
                         className="flex-start"
                       >
-                        <i className="fab fa-linkedin" />
-                      </a>
-                      <a
-                        href="https://www.instagram.com/airytails/"
-                        target="_blank"
-                        className="flex-start"
-                      >
-                        <i className="fab fa-instagram" />
+                        <i className="fab fa-github" />
                       </a>
                     </div>
                   </div>

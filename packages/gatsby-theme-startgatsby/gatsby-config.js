@@ -1,9 +1,11 @@
 module.exports = themeOption => {
+  const { title, description, name, social } = themeOption;
   return {
     siteMetadata: {
-      title: themeOption.title,
-      description: themeOption.description,
-      name: themeOption.name
+      title: title,
+      description: description,
+      name: name,
+      social: social
     },
     plugins: [
       "gatsby-plugin-emotion",
