@@ -1,7 +1,7 @@
 import React from "react";
-import { Global, css } from "@emotion/core";
 import Helmet from "react-helmet";
 import metadata from "./../hooks/siteMetadata";
+import Header from "./header";
 
 const Layout = ({ children }) => {
   const { title, description } = metadata();
@@ -15,6 +15,7 @@ const Layout = ({ children }) => {
           rel="stylesheet"
         /> */}
       </Helmet>
+      <Header />
       <main>{children}</main>
     </>
   );
