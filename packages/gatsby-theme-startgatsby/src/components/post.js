@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-mdx";
 import Layout from "./layout";
 import Img from "gatsby-image";
@@ -27,7 +27,8 @@ export const query = graphql`
   }
 `;
 export default function Post({ data: { mdx: post } }) {
-  const { banner, title, date } = post.frontmatter;
+  const { banner, title, date, categories } = post.frontmatter;
+  console.log(categories);
   return (
     <Layout>
       <div className="post-single-container">
@@ -45,6 +46,14 @@ export default function Post({ data: { mdx: post } }) {
           </header>
           <MDXRenderer>{post.code.body}</MDXRenderer>
         </article>
+        <div className="blog__details flex-start">
+          {categories &&
+            categories.map(category => (
+              <Link className="tag" to={`/tags/${category}`}>
+                {category}
+              </Link>
+            ))}
+        </div>
       </div>
     </Layout>
   );
