@@ -29,7 +29,7 @@ export default function PostGrid({ excerpt, frontmatter }) {
             <p className="blog__intro-text">{excerpt.substr(0, 80)}</p>
           </div>
           <Link className="blog__link" to={slug}>
-            Read More
+            Read More ..
           </Link>
         </div>
         <div className="blog__overlay" />
