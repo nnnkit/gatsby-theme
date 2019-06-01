@@ -151,21 +151,21 @@
 .blog-section__wrapper {
   display: grid;
   grid-template-columns: repeat(3, 2fr);
-  grid-gap: 5rem;
+  grid-gap: 2rem;
 }
 .blog__item {
   position: relative;
   border-radius: 4px;
 }
 .blog__img {
-  min-height: 273px !important;
-  max-height: 273px !important;
+  min-height: 200px;
+  max-height: 200px;
   border-radius: 4px 6px 0 0;
 }
 .blog__content {
   position: relative;
   z-index: 1;
-  padding: 0 2rem 2rem 2rem;
+  padding: 0 1.2rem 1.2rem 1.2rem;
   color: #fff;
 }
 .blog-item__link {
@@ -211,7 +211,7 @@
   }
 }
 .blog__overlay {
-  background: linear-gradient(transparent 14%, #191919, #000);
+  background: linear-gradient(transparent, #191919, #000);
   position: absolute;
   left: 0;
   right: 0;

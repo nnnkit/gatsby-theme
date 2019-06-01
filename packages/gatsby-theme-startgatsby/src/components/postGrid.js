@@ -20,7 +20,7 @@ export default function PostGrid({ excerpt, frontmatter }) {
             <span>{date}</span>
           </div>
           <div>
-            <p className="blog__intro-text">{excerpt}</p>
+            <p className="blog__intro-text">{excerpt.substr(0, 80)}</p>
           </div>
           <Link className="blog__link" to={slug}>
             Read More

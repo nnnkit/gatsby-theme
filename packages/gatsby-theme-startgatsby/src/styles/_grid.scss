@@ -17,31 +17,31 @@ $col-width: 100% / $columns;
 
 @media all and (min-width: 576px) {
   .container {
-    max-width: 100%;
+    max-width: 540px;
   }
 }
 
 @media all and (min-width: 769px) {
   .container {
-    max-width: 100%;
+    max-width: 720px;
   }
 }
 
 @media all and (min-width: 992px) {
   .container {
-    max-width: 100%;
+    max-width: 960px;
   }
 }
 
 @media all and (min-width: 1200px) {
   .container {
-    max-width: 1320px;
+    max-width: 1140px;
   }
 }
 
 @media screen and (min-width: 1400px) {
   .container {
-    width: 1400px;
+    width: 1370px;
   }
 }
 
