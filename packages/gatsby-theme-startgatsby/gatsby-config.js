@@ -8,7 +8,7 @@ module.exports = themeOption => {
       "gatsby-plugin-emotion",
       "gatsby-transformer-sharp",
       "gatsby-plugin-sharp",
-      "gatsby-plugin-postcss",
+      "gatsby-plugin-sass",
       {
         resolve: "gatsby-mdx",
         options: {
