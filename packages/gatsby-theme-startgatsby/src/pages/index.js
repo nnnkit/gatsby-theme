@@ -1,9 +1,5 @@
 import React from "react";
 import allPosts from "../hooks/allPosts";
-import Img from "gatsby-image";
-import { Link } from "gatsby";
-import { css } from "@emotion/core";
-import Layout from "../components/layout";
 import Header from "../components/header";
 import PostGrid from "../components/postGrid";
 

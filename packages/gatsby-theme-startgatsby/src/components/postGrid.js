@@ -13,9 +13,9 @@ export default function postGrid({ excerpt, frontmatter }) {
           alt={title}
         />
         <div className="blog__content">
-          <a className="blog-item__link" href="sigle-post.html">
+          <Link className="blog-item__link" to={slug}>
             <h3 className="blog__heading">{title}</h3>
-          </a>
+          </Link>
           <div className="blog__details flex-start">
             <span>Airytails</span>
             <span className="separator">|</span>
