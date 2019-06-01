@@ -1,14 +1,16 @@
 import React from "react";
 import { Link } from "gatsby";
+import getSiteMetadata from "../hooks/siteMetadata";
 
 export default function Header() {
+  const { name } = getSiteMetadata();
   return (
     <header className="header header-secondary">
       <div className="container">
         <nav className="nav flex-between">
           <Link to="/" className="logo">
             <div class="section">
-              <h1 class="t-stroke--shadow">Nova Blog</h1>
+              <h1 class="t-stroke--shadow">{name}</h1>
             </div>
           </Link>
           <ul className="flex-between nav__menu">

@@ -2,7 +2,8 @@ module.exports = themeOption => {
   return {
     siteMetadata: {
       title: themeOption.title,
-      description: themeOption.description
+      description: themeOption.description,
+      name: themeOption.name
     },
     plugins: [
       "gatsby-plugin-emotion",
@@ -19,9 +20,6 @@ module.exports = themeOption => {
             { resolve: "gatsby-remark-images" },
             {
               resolve: "gatsby-remark-prismjs"
-              // options: {
-              //   inlineCodeMarker: "÷"
-              // }
             }
           ]
         }

@@ -3,7 +3,7 @@ module.exports = {
     {
       resolve: "gatsby-theme-startgatsby",
       options: {
-        name: "StartGatsby Theme Starter",
+        name: "Nova Blog",
         title: "Easiest way to create a blog!",
         description: "Gatsby blog starter ..."
       }

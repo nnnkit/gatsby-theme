@@ -5,6 +5,7 @@ export default function getSiteMetadata() {
     query SiteMetadata {
       site {
         siteMetadata {
+          name
           title
           description
         }
