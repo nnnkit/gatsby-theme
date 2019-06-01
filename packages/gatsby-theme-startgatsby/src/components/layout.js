@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import metadata from "./../hooks/siteMetadata";
 import Header from "./header";
 import "../utils/navScript";
+import Footer from "./footer";
 
 const Layout = ({ children }) => {
   const { title, description } = metadata();
@@ -14,6 +15,7 @@ const Layout = ({ children }) => {
       </Helmet>
       <Header />
       <main>{children}</main>
+      <Footer />
     </>
   );
 };
