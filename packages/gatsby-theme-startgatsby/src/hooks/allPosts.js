@@ -5,6 +5,7 @@ export default function usePostsData() {
     query AllBlogPosts {
       allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
         nodes {
+          id
           frontmatter {
             title
             slug

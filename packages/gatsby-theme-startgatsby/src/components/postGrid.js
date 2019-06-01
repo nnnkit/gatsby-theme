@@ -22,7 +22,9 @@ export default function PostGrid({ excerpt, frontmatter }) {
           <div className="blog__details flex-start">
             {categories &&
               categories.map(category => (
-                <span className="tag">{category}</span>
+                <Link className="tag" to={`/tags/${category}`}>
+                  {category}
+                </Link>
               ))}
           </div>
           <div>

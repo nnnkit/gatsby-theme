@@ -11,7 +11,7 @@ export default function posts() {
         <div className="container">
           <div className="blog-section__wrapper sm-col1">
             {posts.map(post => (
-              <PostGrid {...post} />
+              <PostGrid key={post.id} {...post} />
             ))}
           </div>
         </div>

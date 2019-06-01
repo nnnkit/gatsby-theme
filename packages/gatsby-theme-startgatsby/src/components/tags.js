@@ -15,7 +15,7 @@ export default function tags({
         <div className="container">
           <div className="blog-section__wrapper sm-col1">
             {posts.map(post => (
-              <PostGrid {...post} />
+              <PostGrid key={post.id} {...post} />
             ))}
           </div>
         </div>
@@ -32,9 +32,12 @@ export const query = graphql`
     ) {
       totalCount
       nodes {
+        id
         excerpt
         frontmatter {
           title
+          keywords
+          slug
           banner {
             sharp: childImageSharp {
               fluid {
