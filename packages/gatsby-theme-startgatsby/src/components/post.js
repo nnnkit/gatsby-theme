@@ -25,7 +25,7 @@ export const query = graphql`
     }
   }
 `;
-export default function post({ data: { mdx: post } }) {
+export default function Post({ data: { mdx: post } }) {
   const { banner, title } = post.frontmatter;
   return (
     <Layout>

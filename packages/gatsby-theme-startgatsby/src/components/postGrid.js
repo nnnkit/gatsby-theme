@@ -2,7 +2,7 @@ import React from "react";
 import Img from "gatsby-image";
 import { Link } from "gatsby";
 
-export default function postGrid({ excerpt, frontmatter }) {
+export default function PostGrid({ excerpt, frontmatter }) {
   const { banner, title, slug } = frontmatter;
   return (
     <>

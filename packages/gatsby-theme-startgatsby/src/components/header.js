@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-export default function header() {
+export default function Header() {
   return (
     <header className="header header-secondary">
       <div className="container">
