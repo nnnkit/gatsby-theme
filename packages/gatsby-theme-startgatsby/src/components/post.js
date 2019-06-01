@@ -30,7 +30,7 @@ export default function post({ data: { mdx: post } }) {
   return (
     <Layout>
       <Link
-        to="/posts"
+        to="/"
         css={css`
           font-size: 40px;
         `}
