@@ -7,7 +7,9 @@ export default function Header() {
       <div className="container">
         <nav className="nav flex-between">
           <Link to="/" className="logo">
-            <h3>Grid Blog</h3>
+            <div class="section">
+              <h1 class="t-stroke--shadow">Nova Blog</h1>
+            </div>
           </Link>
           <ul className="flex-between nav__menu">
             <li className="nav__items">
