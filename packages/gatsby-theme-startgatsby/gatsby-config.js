@@ -29,13 +29,13 @@ module.exports = themeOption => {
         resolve: "gatsby-source-filesystem",
         options: {
           name: "posts", // name of the folder
-          path: `${__dirname}/posts/` // path of url
+          path: `./posts/` // path of url
         }
       },
       {
         resolve: "gatsby-plugin-page-creator",
         options: {
-          path: `${__dirname}/src/pages`
+          path: `./src/pages`
         }
       }
     ]
