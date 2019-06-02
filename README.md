@@ -1,3 +1,15 @@
+# How to use this theme
+
+## Steps
+
+1. Create a folder
+
+2. `npm init -y`
+
+3. `npm install react react-dom gatsby gatsby-theme-startgatsby`
+
+4. create a file called `gatsby.config.js`
+
 ```js
 module.exports = {
   __experimentalThemes: [
@@ -17,5 +29,7 @@ module.exports = {
     }
   ]
 };
-
 ```
+5. add a directory called `posts`
+
+6. `gatsby devlope`
