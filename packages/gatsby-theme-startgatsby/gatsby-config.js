@@ -8,7 +8,6 @@ module.exports = themeOption => {
       social: social
     },
     plugins: [
-      "gatsby-plugin-emotion",
       "gatsby-transformer-sharp",
       "gatsby-plugin-sharp",
       "gatsby-plugin-sass",
