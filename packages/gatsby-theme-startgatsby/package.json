@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-startgatsby",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "gatsby-config.js",
   "author": "Ankit <iankit17@gmail.com>",
   "license": "MIT",
@@ -11,6 +11,7 @@
     "gatsby": "2.4.2",
     "gatsby-image": "2.0.41",
     "gatsby-mdx": "0.6.3",
+    "gatsby-plugin-compile-es6-packages": "1.1.0",
     "gatsby-plugin-page-creator": "2.0.12",
     "gatsby-plugin-react-helmet": "3.0.12",
     "gatsby-plugin-sass": "2.0.11",
