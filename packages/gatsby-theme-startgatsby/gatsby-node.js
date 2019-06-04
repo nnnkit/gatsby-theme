@@ -20,6 +20,11 @@ exports.onCreateWebpackConfig = ({ stage, loaders, plugins, actions }) => {
 };
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
+  const { createPage } = actions;
+  createPage({
+    path: "/",
+    component: require.resolve("./src/templates/blog-index.js")
+  });
   const result = await graphql(`
     query {
       allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
@@ -44,7 +49,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     )
   ];
   posts.forEach(post => {
-    actions.createPage({
+    createPage({
       path: post.frontmatter.slug,
       component: require.resolve("./src/components/post.js"),
       context: {
@@ -53,7 +58,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     });
   });
   tags.forEach(tag => {
-    actions.createPage({
+    createPage({
       path: `/tags/${tag}`,
       component: require.resolve("./src/components/tags.js"),
       context: {
