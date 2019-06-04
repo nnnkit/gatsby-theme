@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import { css } from "@emotion/core";
 import { MDXRenderer } from "gatsby-mdx";
 import Layout from "./layout";
 import Img from "gatsby-image";
@@ -18,6 +17,7 @@ export const query = graphql`
             }
           }
         }
+        date(formatString: "MMMM Do, YYYY")
         categories
       }
       code {
@@ -26,24 +26,35 @@ export const query = graphql`
     }
   }
 `;
-export default function post({ data: { mdx: post } }) {
+export default function Post({ data: { mdx: post } }) {
+  const { banner, title, date, categories } = post.frontmatter;
+  console.log(categories);
   return (
     <Layout>
-      <Link
-        to="/posts"
-        css={css`
-          font-size: 40px;
-        `}
-      >
-        <span role="img" aria-label="back">
-          👈
-        </span>
-      </Link>
-      <Img
-        fluid={post.frontmatter.banner.sharp.fluid}
-        alt={post.frontmatter.title}
-      />
-      <MDXRenderer>{post.code.body}</MDXRenderer>
+      <div className="post-single-container">
+        <article className="post-single">
+          <header>
+            <h1 className="post-single__title">{title}</h1>
+            <div className="blog__details flex-start">
+              <span>{date}</span>
+            </div>
+            <Img
+              fluid={banner.sharp.fluid}
+              alt={title}
+              className="img-responsive post-single__img"
+            />
+          </header>
+          <MDXRenderer>{post.code.body}</MDXRenderer>
+        </article>
+        <div className="blog__details flex-start">
+          {categories &&
+            categories.map(category => (
+              <Link className="tag" to={`/tags/${category}`}>
+                {category}
+              </Link>
+            ))}
+        </div>
+      </div>
     </Layout>
   );
 }

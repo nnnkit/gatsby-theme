@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "gatsby-theme",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "scripts": {
     "start": "rm -rf site/.cache && yarn workspace site start"
   },

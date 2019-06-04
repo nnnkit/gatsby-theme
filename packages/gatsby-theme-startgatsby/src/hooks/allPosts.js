@@ -3,8 +3,9 @@ import { graphql, useStaticQuery } from "gatsby";
 export default function usePostsData() {
   const data = useStaticQuery(graphql`
     query AllBlogPosts {
-      allMdx {
+      allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
         nodes {
+          id
           frontmatter {
             title
             slug
@@ -16,6 +17,7 @@ export default function usePostsData() {
                 }
               }
             }
+            date(formatString: "MMMM Do, YYYY")
             categories
           }
           excerpt
