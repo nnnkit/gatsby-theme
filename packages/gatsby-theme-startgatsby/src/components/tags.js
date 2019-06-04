@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "./layout";
 import { graphql } from "gatsby";
+import Layout from "./Layout";
 import PostGrid from "./PostGrid";
 
 export default function tags({
@@ -24,7 +24,7 @@ export default function tags({
   );
 }
 
-export const query = graphql`
+export const tagQuery = graphql`
   query($tag: String) {
     allMdx(
       sort: { order: DESC, fields: [frontmatter___date] }

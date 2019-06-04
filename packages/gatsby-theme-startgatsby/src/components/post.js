@@ -1,31 +1,9 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-mdx";
-import Layout from "./layout";
+import Layout from "./Layout";
 import Img from "gatsby-image";
 
-export const query = graphql`
-  query($slug: String!) {
-    mdx(frontmatter: { slug: { eq: $slug } }) {
-      frontmatter {
-        title
-        keywords
-        banner {
-          sharp: childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid_tracedSVG
-            }
-          }
-        }
-        date(formatString: "MMMM Do, YYYY")
-        categories
-      }
-      code {
-        body
-      }
-    }
-  }
-`;
 export default function Post({ data: { mdx: post } }) {
   const { banner, title, date, categories } = post.frontmatter;
   console.log(categories);
@@ -58,3 +36,26 @@ export default function Post({ data: { mdx: post } }) {
     </Layout>
   );
 }
+
+export const pageQuery = graphql`
+  query($slug: String!) {
+    mdx(frontmatter: { slug: { eq: $slug } }) {
+      frontmatter {
+        title
+        keywords
+        banner {
+          sharp: childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid_tracedSVG
+            }
+          }
+        }
+        date(formatString: "MMMM Do, YYYY")
+        categories
+      }
+      code {
+        body
+      }
+    }
+  }
+`;

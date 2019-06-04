@@ -1,7 +1,7 @@
 import React from "react";
 import allPosts from "../hooks/allPosts";
-import PostGrid from "../components/postGrid";
-import Layout from "../components/layout";
+import PostGrid from "../components/PostGrid";
+import Layout from "../components/Layout";
 
 export default function posts() {
   const posts = allPosts();

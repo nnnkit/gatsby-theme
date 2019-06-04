@@ -1,8 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
-import metadata from "../hooks/siteMetadata";
+import metadata from "./../hooks/siteMetadata";
 import Header from "./Header";
-import "../utils/navScript";
 import Footer from "./Footer";
 
 const Layout = ({ children }) => {
