@@ -1,3 +1,4 @@
+const path = require("path");
 /**
  * When shipping NPM modules, they typically need to be either
  * pre-compiled or the user needs to add bundler config to process the
@@ -46,7 +47,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   posts.forEach(post => {
     actions.createPage({
       path: post.frontmatter.slug,
-      component: require.resolve("./src/components/post.js"),
+      component: path.resolve("./src/components/post.js"),
       context: {
         slug: post.frontmatter.slug
       }
@@ -55,7 +56,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   tags.forEach(tag => {
     actions.createPage({
       path: `/tags/${tag}`,
-      component: require.resolve("./src/components/tags.js"),
+      component: path.resolve("./src/components/tags.js"),
       context: {
         tag
       }

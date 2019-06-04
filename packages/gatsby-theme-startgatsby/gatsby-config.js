@@ -1,3 +1,4 @@
+const path = require("path");
 module.exports = themeOption => {
   const { title, description, name, social } = themeOption;
   return {
@@ -36,7 +37,7 @@ module.exports = themeOption => {
       {
         resolve: "gatsby-plugin-page-creator",
         options: {
-          path: `${__dirname}/src/pages`
+          path: path.join(__dirname, `src`, `pages`)
         }
       },
       {
