@@ -1,7 +1,7 @@
 {
   "name": "gatsby-theme-startgatsby",
-  "version": "1.0.2",
-  "main": "gatsby-config.js",
+  "version": "1.0.8",
+  "main": "index.js",
   "author": "Ankit <iankit17@gmail.com>",
   "license": "MIT",
   "dependencies": {
