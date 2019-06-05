@@ -31,19 +31,19 @@ module.exports = themeOption => {
         resolve: "gatsby-source-filesystem",
         options: {
           name: "posts", // name of the folder
-          path: "./posts/" // path of url
-        }
-      },
-      {
-        resolve: "gatsby-plugin-page-creator",
-        options: {
-          path: path.join(__dirname, `src`, `pages`)
+          path: path.resolve("./posts") // path of url
         }
       },
       {
         resolve: "gatsby-plugin-compile-es6-packages",
         options: {
           modules: ["gatsby-theme-startgatsby"]
+        }
+      },
+      {
+        resolve: `gatsby-plugin-page-creator`,
+        options: {
+          path: path.join(__dirname, `src`, `pages`)
         }
       }
     ]

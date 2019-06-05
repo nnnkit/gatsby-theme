@@ -1,10 +1,15 @@
 import React from "react";
+import { graphql } from "gatsby";
 import allPosts from "../hooks/allPosts";
 import PostGrid from "../components/PostGrid";
 import Layout from "../components/Layout";
 
-export default function posts() {
-  const posts = allPosts();
+export default function posts({
+  data: {
+    allMdx: { nodes: posts }
+  }
+}) {
+  console.log(posts);
   return (
     <Layout>
       <section className="padding">
@@ -19,3 +24,28 @@ export default function posts() {
     </Layout>
   );
 }
+
+export const pageQuery = graphql`
+  query IndexPosts {
+    allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
+      nodes {
+        id
+        frontmatter {
+          title
+          slug
+          keywords
+          banner {
+            sharp: childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+          date(formatString: "MMMM Do, YYYY")
+          categories
+        }
+        excerpt
+      }
+    }
+  }
+`;

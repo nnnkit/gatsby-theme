@@ -5,7 +5,7 @@
   "author": "Ankit <iankit17@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "GATSBY_GRAPHQL_IDE=playground gatsby develop",
+    "start": "GATSBY_GRAPHQL_IDE=playground gatsby develop -p 4000",
     "build": "gatsby build"
   },
   "dependencies": {

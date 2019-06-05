@@ -1,3 +1,5 @@
+const path = require("path");
+
 /**
  * When shipping NPM modules, they typically need to be either
  * pre-compiled or the user needs to add bundler config to process the
@@ -5,7 +7,7 @@
  * we never need a lib-side build step.  Since we dont pre-compile the
  * theme, this is how we let webpack know how to process files.
  */
-exports.onCreateWebpackConfig = ({ stage, loaders, plugins, actions }) => {
+exports.onCreateWebpackConfig = ({ loaders, actions }) => {
   actions.setWebpackConfig({
     module: {
       rules: [
@@ -21,10 +23,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, plugins, actions }) => {
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
-  createPage({
-    path: "/",
-    component: require.resolve("./src/templates/blog-index.js")
-  });
+
   const result = await graphql(`
     query {
       allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
