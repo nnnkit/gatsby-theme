@@ -1,12 +1,11 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-mdx";
-import Layout from "./Layout";
+import Layout from "../components/Layout";
 import Img from "gatsby-image";
 
 export default function Post({ data: { mdx: post } }) {
   const { banner, title, date, categories } = post.frontmatter;
-  console.log(categories);
   return (
     <Layout>
       <div className="post-single-container">

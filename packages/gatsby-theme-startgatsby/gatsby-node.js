@@ -50,7 +50,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   posts.forEach(post => {
     createPage({
       path: post.frontmatter.slug,
-      component: require.resolve("./src/components/post.js"),
+      component: require.resolve("./src/components/Post.js"),
       context: {
         slug: post.frontmatter.slug
       }
@@ -59,7 +59,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   tags.forEach(tag => {
     createPage({
       path: `/tags/${tag}`,
-      component: require.resolve("./src/components/tags.js"),
+      component: require.resolve("./src/components/Tags.js"),
       context: {
         tag
       }
