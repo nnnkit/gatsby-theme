@@ -1,10 +1,9 @@
 const path = require("path");
 module.exports = themeOption => {
-  const { title, description, name, social } = themeOption;
+  const { title, name, social } = themeOption;
   return {
     siteMetadata: {
       title: title,
-      description: description,
       name: name,
       social: social
     },

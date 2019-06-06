@@ -7,7 +7,6 @@ export default function getSiteMetadata() {
         siteMetadata {
           name
           title
-          description
         }
       }
     }

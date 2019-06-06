@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "./Layout";
-import PostGrid from "./PostGrid";
+import Layout from "../components/Layout";
+import PostGrid from "../components/PostGrid";
 
 export default function tags({
   data: {
