@@ -8,7 +8,7 @@
 
 3. `npm install react react-dom gatsby gatsby-theme-startgatsby`
 
-4. create a file called `gatsby.config.js`
+4. create a file called `gatsby.config.js` and change the below information with you own details.
 
 ```js
 module.exports = {
