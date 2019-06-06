@@ -14,7 +14,7 @@ export default function tags({
     <Layout>
       <section className="padding">
         <div className="container">
-          <h3 className="flex-center">{tag}</h3>
+          <h3 className="flex-center single-category">Category: {tag}</h3>
           <div className="blog-section__wrapper sm-col1">
             {posts.map(post => (
               <PostGrid key={post.id} {...post} />
