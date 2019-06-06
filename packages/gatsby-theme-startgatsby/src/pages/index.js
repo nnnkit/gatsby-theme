@@ -26,7 +26,11 @@ export default function posts({
 
 export const pageQuery = graphql`
   query IndexPosts {
-    allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMdx(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { published: { eq: true } } }
+      limit: 10
+    ) {
       nodes {
         id
         frontmatter {
