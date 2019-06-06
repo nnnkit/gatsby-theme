@@ -14,6 +14,11 @@ export default function Post({ data: { mdx: post } }) {
             <h1 className="post-single__title">{title}</h1>
             <div className="blog__details flex-start">
               <span>{date}</span>
+              {categories.map(category => (
+                <Link to={`/tags/${category}`}>
+                  <span className="tag">{category}</span>
+                </Link>
+              ))}
             </div>
             <Img
               fluid={banner.sharp.fluid}

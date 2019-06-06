@@ -70,6 +70,13 @@
     margin-top: 0.6rem;
     color: #02173f;
     font-size: 1rem;
+    .tag {
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      border: none;
+      margin-right: 0;
+    }
   }
   p {
     color: rgba(0, 0, 0, 0.84);
