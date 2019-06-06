@@ -36,7 +36,6 @@ export const tagQuery = graphql`
         excerpt
         frontmatter {
           title
-          keywords
           slug
           banner {
             sharp: childImageSharp {

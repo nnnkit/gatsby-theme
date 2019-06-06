@@ -32,7 +32,6 @@ export const pageQuery = graphql`
         frontmatter {
           title
           slug
-          keywords
           banner {
             sharp: childImageSharp {
               fluid {
