@@ -41,7 +41,6 @@ export const pageQuery = graphql`
     mdx(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
         title
-        keywords
         banner {
           sharp: childImageSharp {
             fluid {
