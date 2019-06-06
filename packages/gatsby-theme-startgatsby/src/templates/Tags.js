@@ -28,7 +28,9 @@ export const tagQuery = graphql`
   query($tag: String) {
     allMdx(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { categories: { in: [$tag] } } }
+      filter: {
+        frontmatter: { categories: { in: [$tag] }, published: { eq: true } }
+      }
     ) {
       totalCount
       nodes {
