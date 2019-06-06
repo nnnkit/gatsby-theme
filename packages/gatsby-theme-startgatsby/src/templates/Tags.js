@@ -6,13 +6,15 @@ import PostGrid from "../components/PostGrid";
 export default function tags({
   data: {
     allMdx: { nodes: posts }
-  }
+  },
+  pageContext: { tag }
 }) {
-  console.log(posts);
+  console.log(tag);
   return (
     <Layout>
       <section className="padding">
         <div className="container">
+          <h3 className="flex-center">{tag}</h3>
           <div className="blog-section__wrapper sm-col1">
             {posts.map(post => (
               <PostGrid key={post.id} {...post} />
