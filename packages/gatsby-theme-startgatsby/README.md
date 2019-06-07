@@ -41,7 +41,7 @@ date: 2019-05-08
 title: Sample Post For Blog
 description: MDX Example Description ...
 categories: ["react", "node"]
-keywords: ["react"]
+published: true
 banner: "./images/banner.jpeg"
 ---
 
