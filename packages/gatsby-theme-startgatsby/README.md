@@ -30,9 +30,11 @@ module.exports = {
   ]
 };
 ```
-5. In your root directory run this command `mkdir posts && cd posts && touch learn-react.md`
+5. In your root directory run this command `mkdir -p posts/01`
 
-6. Add a smaple post in `learn-react.md` it will look something like this
+6. Create a post file `cd posts/01 && touch learn-react.md`
+
+7. Add a smaple post in `learn-react.md` it will look something like this
 
 ```md
 ---
