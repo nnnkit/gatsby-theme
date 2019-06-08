@@ -6,7 +6,7 @@
 3. Multiple Pages
 
 ## Preview
-![Blog Preview](./blog-preview.png)
+![Blog Preview](https://github.com/nnnkit/gatsby-theme/blob/master/packages/gatsby-theme-startgatsby/blog-preview.png)
 
 ## Steps
 
