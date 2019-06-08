@@ -14,16 +14,16 @@ export default function Header() {
             </div>
           </Link>
           <ul className="flex-between nav__menu">
-            {/* <li className="nav__items">
+            <li className="nav__items">
               <Link className="nav__link" to="/">
                 Home
               </Link>
-            </li> */}
-            {/* <li className="nav__items">
+            </li>
+            <li className="nav__items">
               <Link className="nav__link" to="/contact">
                 Contact Us
               </Link>
-            </li> */}
+            </li>
           </ul>
           <div className="toggle">
             <span className="line line1" />
