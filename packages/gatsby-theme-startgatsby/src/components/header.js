@@ -19,11 +19,11 @@ export default function Header() {
                 Home
               </Link>
             </li>
-            <li className="nav__items">
+            {/* <li className="nav__items">
               <Link className="nav__link" to="/contact">
                 Contact Us
               </Link>
-            </li>
+            </li> */}
           </ul>
           <div className="toggle">
             <span className="line line1" />
