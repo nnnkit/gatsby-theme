@@ -1,4 +1,12 @@
-# How to use this theme
+# StartGatsby
+
+## Features
+1. Write your blog in markdown.
+2. Filter with category
+3. Multiple Pages
+
+## Preview
+![Blog Preview](./blog-preview.png)
 
 ## Steps
 
